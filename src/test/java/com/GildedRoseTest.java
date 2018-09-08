@@ -11,14 +11,14 @@ public class GildedRoseTest {
 
     @Test
     public void Sulfuras_QualityDoesNotDecrease() {
-        GildedRose app = new GildedRose(createItemArray("Sulfuras, Hand of Ragnaros", 20, 33));
+        GildedRose app = new GildedRose(createItemArray("Sulfuras, Hand of Ragnaros", 20, 80));
         app.updateQuality();
-        assertEquals(33, app.items[0].quality, "Quality is not decreased for this legendary item");
+        assertEquals(80, app.items[0].quality, "Quality is not decreased for this legendary item");
     }
 
     @Test
     public void Sulfuras_NeverHasToBeSold() {
-        GildedRose app = new GildedRose(createItemArray("Sulfuras, Hand of Ragnaros", 1, 17));
+        GildedRose app = new GildedRose(createItemArray("Sulfuras, Hand of Ragnaros", 1, 80));
         app.updateQuality();
         assertEquals(1, app.items[0].sellIn, "Sellin is not decreased for this legendary item");
     }
