@@ -7,7 +7,9 @@ repositories {
 }
 
 dependencies {
-  testCompile('org.junit.jupiter:junit-jupiter-api:5.1.0')
+  testCompile(
+    'org.junit.jupiter:junit-jupiter-api:5.1.0'
+  )
   testImplementation(
     'org.junit.jupiter:junit-jupiter-api:5.1.0'
   )
@@ -19,7 +21,7 @@ dependencies {
 }
 
 test {
-//  useJUnitPlatform()
+  useJUnitPlatform()
   testLogging {
     events "passed", "skipped", "failed"
   }
