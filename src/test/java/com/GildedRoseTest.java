@@ -17,6 +17,7 @@ public class GildedRoseTest {
     }
 
     @Test
+<<<<<<< HEAD
     public void LegendaryItem_QualityDoesNotDecrease() {
         // Arrange
         GildedRose app = new GildedRose(createItemArray("Sulfuras, Hand of Ragnaros", 20, 80));
@@ -25,11 +26,20 @@ public class GildedRoseTest {
         app.updateQuality();
 
         // Assert
+=======
+    public void Sulfuras_QualityDoesNotDecrease() {
+        GildedRose app = new GildedRose(createItemArray("Sulfuras, Hand of Ragnaros", 20, 80));
+        app.updateQuality();
+>>>>>>> 033ccb50715de0b570779f99caab7bc8e08f3986
         assertEquals(80, app.items[0].quality, "Quality is not decreased for this legendary item");
     }
 
     @Test
+<<<<<<< HEAD
     public void LegendaryItem_NeverHasToBeSold() {
+=======
+    public void Sulfuras_NeverHasToBeSold() {
+>>>>>>> 033ccb50715de0b570779f99caab7bc8e08f3986
         GildedRose app = new GildedRose(createItemArray("Sulfuras, Hand of Ragnaros", 1, 80));
         app.updateQuality();
         assertEquals(1, app.items[0].sellIn, "Sellin is not decreased for this legendary item");
